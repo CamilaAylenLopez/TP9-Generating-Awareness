@@ -13,6 +13,14 @@
   }
 }
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://fondosmil.com/fondo/2303.jpg');
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

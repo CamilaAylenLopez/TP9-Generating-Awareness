@@ -1,0 +1,62 @@
+img{
+    width: 50rem;
+    padding-bottom: 2%;
+}
+
+@font-face{
+  font-family: 'spicyNoodle';
+  src: local('spicyNoodle'), url(../assets/fonts/spicy_noodle/SpicyNoodle.otf) format('opentype');
+}
+
+.posicionarMapa{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  font-family: spicyNoodle;
+  font-size: 5rem;
+  color: #61C65D;
+  margin-top: 7rem;
+}
+
+.texto{
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.cuadro{
+  background-color: rgba(71, 71, 71, 0.54);
+  color: aliceblue;
+  word-wrap: break-word;  border-style: dashed; 
+}
+
+.cuadroDos{
+  word-wrap: break-word;  border-style:double;
+  background-color: rgba(71, 71, 71, 0.54);
+  padding: 2rem;
+  color: aliceblue;
+}
+
+.centrardeHome {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5rem;
+}
+
+.centrarJust{
+  display: flex;
+  justify-content: center;
+}
+
+.margen{
+  margin: 8rem;
+  margin-top: 2rem;
+}
+
+.margenDos{
+  margin: 2rem;
+}
