@@ -21,6 +21,7 @@ const Layout = () => {
                             <Link to={' '} className='linkEstilo espacio posicionCorrecta'>Home</Link>
                             <Link to={'/Informacion'} className='linkEstilo posicionCorrecta espacio'>Informacion</Link>
                             <Link to={'/PuntosVerdes'} className='linkEstilo posicionCorrecta espacio'>Mapa</Link>
+                            <Link to={'/Perfil'} className='linkEstilo posicionCorrecta espacio'>Perfil</Link>
                             <NavDropdown title="Juegos" id="basic-nav-dropdown">
                                 <NavDropdown.Item><Link to={'/JuegoUno'} className='linkEstilo'>Reciclar</Link></NavDropdown.Item>
                                 <NavDropdown.Item>
