@@ -14,6 +14,11 @@ img{
   justify-content: center;
 }
 
+.boton{
+  border-radius: 20;
+  background-color: burlywood;
+}
+
 .titulo {
   display: flex;
   justify-content: center;

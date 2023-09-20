@@ -10,10 +10,13 @@ import Layout from './componentes/Layout';
 import PuntosVerdes from './componentes/PuntosVerdes';
 import Perfil from './componentes/Perfil';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import UsuarioProvider from './context/UsuarioContext';
+
 
 function App() {
   return (
     <div>
+      <UsuarioProvider>
       <BrowserRouter>
         <Routes>
         <Route path='/' element={<Layout />}>
@@ -28,6 +31,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </UsuarioProvider>
     </div>
   );
 }

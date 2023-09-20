@@ -1,9 +1,9 @@
-import React from 'react';
+import {createContext, useState} from 'react';
 
-export const UsuarioContext = React.createContext(null);
+export const UsuarioContext = createContext();
 
 const UsuarioProvider = (props) => {
-    const [usuario, setUsuario] = React.useState('Camila');
+    const [usuario, setUsuario] = useState('camila');
 
     return <UsuarioContext.Provider value={{usuario, setUsuario}}>{props.children}</UsuarioContext.Provider>
 }

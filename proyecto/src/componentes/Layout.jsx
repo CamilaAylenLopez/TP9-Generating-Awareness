@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logojuegps from '../assets/img/logojuegps.png'
+import logojuegps from '../assets/img/logojuegps.png';
+import Usuario from './Usuario';
 
 const Layout = () => {
     return (
