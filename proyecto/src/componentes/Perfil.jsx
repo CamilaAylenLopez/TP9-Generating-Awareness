@@ -10,7 +10,9 @@ const Perfil = () => {
         <>
         <h1 className='titulo'>Perfil</h1>
         <h1>Nombre: {usuario}</h1>
-        <button className='boton' onClick={() => setUsuario('Kasses')}>Cambiar perfil</button>
+        <div className='centrarJust'>
+            <button className='boton' onClick={() => setUsuario('Kasses')}>Cambiar perfil</button>
+        </div>
         </>
     )
 }

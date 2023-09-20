@@ -15,8 +15,11 @@ img{
 }
 
 .boton{
-  border-radius: 20;
-  background-color: burlywood;
+  border-radius: 13rem;
+  min-height: 2rem;
+  min-width: 10rem;
+  background-color: rgb(80, 129, 99);
+  color: white;
 }
 
 .titulo {
