@@ -143,7 +143,7 @@ const JuegoDos = (props) => {
       }
       else {
         setPuntos(puntos - 10)
-          
+        if(trivia -10 > puntos - 10) setTrivia(puntos - 10)
         alert('Prueba otra vez :)')
         if(puntos <= -20){
           setJuegoTerminado(2)
