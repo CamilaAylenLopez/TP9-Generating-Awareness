@@ -1,11 +1,14 @@
 import './Juegos.css'
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
+import { UsuarioContext } from "../context/UsuarioContext";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const JuegoUno = (props) => {
   const [objetoActual, setObjetoActual] = useState(0)
   const [juegoTerminado, setJuegoTerminado] = useState(false)
   const [puntos, setPuntos] = useState(0)
+  const {reciclable, setReciclable} = useContext(UsuarioContext);
+
   const [objeto, setObjeto] = useState([{
     objeto: 'cuaderno',
     tacho: 'azul',
@@ -62,6 +65,7 @@ const JuegoUno = (props) => {
     if (juegoTerminado === false) {
       if (objeto[objetoActual].tacho === e.target.alt) {
         setPuntos(puntos + 20)
+        if(reciclable < puntos + 20) setReciclable(puntos + 20)
         const objetosSinUsar = objeto.slice()
         objetosSinUsar.splice(objetoActual, 1)
         setObjeto(objetosSinUsar)

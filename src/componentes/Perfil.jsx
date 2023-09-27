@@ -1,12 +1,12 @@
 import './Home.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { UsuarioContext } from "../context/UsuarioContext";
 
 const Perfil = () => {
-    const {usuario, setUsuario} = React.useContext(UsuarioContext);
-    const {reciclable, setReciclable} = React.useContext(UsuarioContext);
-    const {trivia, setTrivia} = React.useContext(UsuarioContext);
+    const {usuario, setUsuario} = useContext(UsuarioContext);
+    const {reciclable, setReciclable} = useContext(UsuarioContext);
+    const {trivia, setTrivia} = useContext(UsuarioContext);
 
     return (
         <>

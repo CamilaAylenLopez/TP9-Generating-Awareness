@@ -1,10 +1,14 @@
 import './Juegos.css'
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
+import { UsuarioContext } from "../context/UsuarioContext"
+
 
 const JuegoDos = (props) => {
   const [preguntaActual, setPreguntaActual] = useState(0)
   const [juegoTerminado, setJuegoTerminado] = useState(0)
   const [puntos, setPuntos] = useState(0)
+  const {trivia, setTrivia} = useContext(UsuarioContext)
+
   const [respondioCorrectamente, setRespondioCorrectamente] = useState(false)
   const [elId, setElId] = useState(1)
   const [preguntas, setPreguntas] = useState([{
@@ -126,6 +130,7 @@ const JuegoDos = (props) => {
     if (juegoTerminado === 0) {
       if (preguntas[preguntaActual].respuestaCorrecta === e.target.id) {
         setPuntos(puntos + 20)
+        if(trivia < puntos + 20) setTrivia(puntos + 20)
         if (preguntaActual === 11) {
           setJuegoTerminado(1)
           alert('El juego termino!!!')
@@ -138,6 +143,7 @@ const JuegoDos = (props) => {
       }
       else {
         setPuntos(puntos - 10)
+          
         alert('Prueba otra vez :)')
         if(puntos <= -20){
           setJuegoTerminado(2)
