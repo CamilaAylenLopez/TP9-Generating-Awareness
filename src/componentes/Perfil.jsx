@@ -7,7 +7,12 @@ const Perfil = () => {
     const {usuario, setUsuario} = useContext(UsuarioContext);
     const {reciclable, setReciclable} = useContext(UsuarioContext);
     const {trivia, setTrivia} = useContext(UsuarioContext);
-
+    useEffect(() => {
+        const puntosUno = JSON.parse(localStorage.getItem('PuntosUno'));
+        if (puntosUno) setReciclable(puntosUno)
+        const puntosDos = JSON.parse(localStorage.getItem('PuntosDos'));
+        if (puntosDos) setTrivia(puntosDos)
+      }, [])
     return (
         <>
         <h1 className='titulo'>Perfil</h1>

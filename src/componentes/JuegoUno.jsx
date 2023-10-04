@@ -59,6 +59,10 @@ const JuegoUno = (props) => {
   useEffect(() => {
     setObjetoActual(Math.floor(Math.random() * objeto.length))
   }, [])
+  useEffect(()=>{
+    localStorage.setItem('PuntosUno', JSON.stringify(reciclable))
+    console.log(reciclable)
+  }, [reciclable])
 
   const verificar = (e) => {
     e.preventDefault();

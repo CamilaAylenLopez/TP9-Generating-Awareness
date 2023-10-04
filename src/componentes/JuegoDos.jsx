@@ -124,7 +124,11 @@ const JuegoDos = (props) => {
   useEffect(() => {
     setPreguntaActual(0)
   }, [])
-
+  useEffect(()=>{
+    localStorage.setItem('PuntosDos', JSON.stringify(trivia))
+    console.log(trivia)
+  }, [trivia])
+  
   const verificar = (e) => {
     e.preventDefault();
     if (juegoTerminado === 0) {
